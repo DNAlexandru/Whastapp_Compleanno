@@ -1,0 +1,15 @@
+{
+  "gruppo": "Reuniune de familie 🇲🇩",
+  "approvatore": "393275859000",
+  "modalita": "approvazione",
+  "ora": "09:00",
+  "fusoOrario": "Europe/Chisinau",
+  "scadenzaApprovazione": "13:00",
+  "seNessunaRisposta": "invia",
+  "lingua": "rumeno",
+  "tono": "caloroso, ricco di significato ed emozionante, a nome di tutta la famiglia",
+  "sogliaEtaMenzionata": 60,
+  "ricordaDefunti": false,
+  "firma": "",
+  "modelloGemini": "gemini-3.8-flash"
+}

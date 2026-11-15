@@ -1,0 +1,52 @@
+{
+  "_istruzioni": "Una riga per persona. anno=null se sconosciuto. genitori/coniuge = id di altre persone. note = dettagli per personalizzare (hobby, lavoro, eventi dell'anno). telefono = numero con prefisso senza + (es. 37369123456) per menzionarlo con @ nel gruppo. citaEta=true cita sempre l'età come traguardo (anche sopra la soglia), citaEta=false non la cita mai. attivo=false per non mandare auguri.",
+  "persone": [
+    { "id": "tudor",      "nome": "Tudor",      "sesso": "M", "giorno": 2,  "mese": 5,  "anno": 1939, "genitori": [],                      "coniuge": "ifimia",    "note": "bunelul, capostipite della famiglia", "citaEta": true },
+    { "id": "ifimia",     "nome": "Ifimia",     "sesso": "F", "giorno": 16, "mese": 9,  "anno": null, "genitori": [],                      "coniuge": "tudor",     "note": "bunica", "defunto": true },
+
+    { "id": "ion_60",     "nome": "Ion",        "sesso": "M", "giorno": 9,  "mese": 8,  "anno": 1960, "genitori": ["tudor", "ifimia"],     "coniuge": "liuda",     "note": "il figlio maggiore di Tudor" },
+    { "id": "liuda",      "nome": "Liuda",      "sesso": "F", "giorno": 27, "mese": 11, "anno": 1960, "genitori": [],                      "coniuge": "ion_60",    "note": "" },
+    { "id": "alexei",     "nome": "Alexei",     "sesso": "M", "giorno": 14, "mese": 8,  "anno": 1983, "genitori": ["ion_60", "liuda"],     "coniuge": "xenia",     "note": "" },
+    { "id": "xenia",      "nome": "Xenia",      "sesso": "F", "giorno": 22, "mese": 2,  "anno": 1986, "genitori": [],                      "coniuge": "alexei",    "note": "" },
+    { "id": "natasa_09",  "nome": "Natașa",     "sesso": "F", "giorno": 24, "mese": 11, "anno": 2009, "genitori": ["alexei", "xenia"],     "coniuge": null,        "note": "" },
+    { "id": "vadim",      "nome": "Vadim",      "sesso": "M", "giorno": 1,  "mese": 8,  "anno": 2014, "genitori": ["alexei", "xenia"],     "coniuge": null,        "note": "" },
+    { "id": "anea",       "nome": "Anea",       "sesso": "F", "giorno": 10, "mese": 2,  "anno": 2016, "genitori": ["alexei", "xenia"],     "coniuge": null,        "note": "" },
+
+    { "id": "simion",     "nome": "Simion",     "sesso": "M", "giorno": 24, "mese": 9,  "anno": 1967, "genitori": ["tudor", "ifimia"],     "coniuge": "sveta",     "note": "" },
+    { "id": "sveta",      "nome": "Sveta",      "sesso": "F", "giorno": 9,  "mese": 1,  "anno": 1972, "genitori": [],                      "coniuge": "simion",    "note": "" },
+    { "id": "igor",       "nome": "Igor",       "sesso": "M", "giorno": 28, "mese": 10, "anno": 1998, "genitori": ["simion", "sveta"],     "coniuge": null,        "note": "" },
+
+    { "id": "rodica",     "nome": "Rodica",     "sesso": "F", "giorno": 5,  "mese": 2,  "anno": 1965, "genitori": ["tudor", "ifimia"],     "coniuge": "neculai",   "note": "" },
+    { "id": "neculai",    "nome": "Neculai",    "sesso": "M", "giorno": 10, "mese": 3,  "anno": 1962, "genitori": [],                      "coniuge": "rodica",    "note": "chiamato anche Nicolae / Colea" },
+    { "id": "marica",     "nome": "Marica",     "sesso": "F", "giorno": 21, "mese": 4,  "anno": 1987, "genitori": ["rodica", "neculai"],   "coniuge": "andrian_88","note": "" },
+    { "id": "andrian_88", "nome": "Andrian",    "sesso": "M", "giorno": 10, "mese": 5,  "anno": 1988, "genitori": [],                      "coniuge": "marica",    "note": "" },
+    { "id": "adelina",    "nome": "Adelina",    "sesso": "F", "giorno": 14, "mese": 6,  "anno": 2013, "genitori": ["marica", "andrian_88"],"coniuge": null,        "note": "" },
+    { "id": "dani_19",    "nome": "Dani",       "sesso": "M", "giorno": 15, "mese": 11, "anno": 2019, "genitori": ["marica", "andrian_88"],"coniuge": null,        "note": "" },
+    { "id": "bogdanel",   "nome": "Bogdănel",   "sesso": "M", "giorno": 20, "mese": 8,  "anno": 2024, "genitori": ["marica", "andrian_88"],"coniuge": null,        "note": "" },
+    { "id": "andrei",     "nome": "Andrei",     "sesso": "M", "giorno": 15, "mese": 8,  "anno": 1989, "genitori": ["rodica", "neculai"],   "coniuge": "diana",     "note": "" },
+    { "id": "diana",      "nome": "Diana",      "sesso": "F", "giorno": 16, "mese": 12, "anno": 1991, "genitori": [],                      "coniuge": "andrei",    "note": "" },
+    { "id": "amelia",     "nome": "Amelia",     "sesso": "F", "giorno": 28, "mese": 7,  "anno": 2015, "genitori": ["andrei", "diana"],     "coniuge": null,        "note": "" },
+    { "id": "mirandusca", "nome": "Mirandușca", "sesso": "F", "giorno": 28, "mese": 12, "anno": 2020, "genitori": ["andrei", "diana"],     "coniuge": null,        "note": "" },
+
+    { "id": "maria",      "nome": "Maria",      "sesso": "F", "giorno": 29, "mese": 2,  "anno": 1972, "genitori": ["tudor", "ifimia"],     "coniuge": "andrea",    "note": "mamma di Alex; negli anni non bisestili festeggia il 1 marzo" },
+    { "id": "andrea",     "nome": "Andrea",     "sesso": "M", "giorno": 29, "mese": 7,  "anno": 1952, "genitori": [],                      "coniuge": "maria",     "note": "" },
+    { "id": "lucia",      "nome": "Lucia",      "sesso": "F", "giorno": 24, "mese": 10, "anno": 1990, "genitori": ["maria"],               "coniuge": "dani_95",   "note": "sorella di Alex" },
+    { "id": "dani_95",    "nome": "Dani",       "sesso": "M", "giorno": 19, "mese": 2,  "anno": 1995, "genitori": [],                      "coniuge": "lucia",     "note": "" },
+    { "id": "leo",        "nome": "Leo",        "sesso": "M", "giorno": 30, "mese": 10, "anno": 2021, "genitori": ["lucia", "dani_95"],    "coniuge": null,        "note": "" },
+    { "id": "alex",       "nome": "Alex",       "sesso": "M", "giorno": 26, "mese": 5,  "anno": 1997, "genitori": ["maria"],               "coniuge": "zlata",     "note": "", "io": true },
+    { "id": "zlata",      "nome": "Zlata",      "sesso": "F", "giorno": 14, "mese": 12, "anno": 1997, "genitori": [],                      "coniuge": "alex",      "note": "fidanzata di Alex (non sposati)", "relazioneConiuge": "fidanzata" },
+
+    { "id": "iulia",      "nome": "Iulia",      "sesso": "F", "giorno": 19, "mese": 6,  "anno": 1974, "genitori": ["tudor", "ifimia"],     "coniuge": "colea",     "note": "" },
+    { "id": "colea",      "nome": "Colea",      "sesso": "M", "giorno": 25, "mese": 10, "anno": 1969, "genitori": [],                      "coniuge": "iulia",     "note": "" },
+    { "id": "nicoleta",   "nome": "Nicoleta",   "sesso": "F", "giorno": 17, "mese": 5,  "anno": 2001, "genitori": ["iulia", "colea"],      "coniuge": null,        "note": "" },
+    { "id": "dani_10",    "nome": "Dani",       "sesso": "M", "giorno": 9,  "mese": 5,  "anno": 2010, "genitori": ["iulia", "colea"],      "coniuge": null,        "note": "" },
+
+    { "id": "natasa_82",  "nome": "Natașa",     "sesso": "F", "giorno": 28, "mese": 5,  "anno": 1982, "genitori": ["tudor", "ifimia"],     "coniuge": "ion_74",    "note": "" },
+    { "id": "ion_74",     "nome": "Ion",        "sesso": "M", "giorno": 23, "mese": 10, "anno": 1974, "genitori": [],                      "coniuge": "natasa_82", "note": "" },
+    { "id": "verginica",  "nome": "Verginica",  "sesso": "F", "giorno": 12, "mese": 3,  "anno": 2003, "genitori": ["natasa_82", "ion_74"], "coniuge": null,        "note": "" },
+    { "id": "violeta",    "nome": "Violeta",    "sesso": "F", "giorno": 13, "mese": 11, "anno": 2004, "genitori": ["natasa_82", "ion_74"], "coniuge": "andrian_02","note": "" },
+    { "id": "andrian_02", "nome": "Andrian",    "sesso": "M", "giorno": 24, "mese": 8,  "anno": 2002, "genitori": [],                      "coniuge": "violeta",   "note": "" },
+    { "id": "cristinel",  "nome": "Cristinel",  "sesso": "M", "giorno": 21, "mese": 8,  "anno": 2025, "genitori": ["violeta", "andrian_02"],"coniuge": null,       "note": "" },
+    { "id": "victorita",  "nome": "Victorița",  "sesso": "F", "giorno": 9,  "mese": 6,  "anno": 2011, "genitori": ["natasa_82", "ion_74"], "coniuge": null,        "note": "" }
+  ]
+}

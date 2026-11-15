@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Avvia il bot al login e lo riavvia se si chiude. Installazione: vedi README, passo 6. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.auguri-whatsapp</string>
+  <key>WorkingDirectory</key><string>/Users/alex/Desktop/Projects/auguri-whatsapp</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/bin/node</string>
+    <string>--env-file-if-exists=.env</string>
+    <string>src/bot.js</string>
+  </array>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>ThrottleInterval</key><integer>60</integer>
+  <key>StandardOutPath</key><string>/Users/alex/Desktop/Projects/auguri-whatsapp/logs/bot.log</string>
+  <key>StandardErrorPath</key><string>/Users/alex/Desktop/Projects/auguri-whatsapp/logs/bot.log</string>
+</dict>
+</plist>
