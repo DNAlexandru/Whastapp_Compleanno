@@ -28,7 +28,4 @@ RUN npm install --omit=dev
 
 COPY . .
 
-# Cartelle persistenti per non perdere la sessione di WhatsApp e lo stato
-VOLUME ["/app/.wwebjs_auth", "/app/data"]
-
 CMD ["node", "--env-file-if-exists=.env", "src/bot.js"]
