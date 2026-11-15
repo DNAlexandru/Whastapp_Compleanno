@@ -27,6 +27,7 @@ const client = new Client({
       "--disable-accelerated-2d-canvas",
       "--disable-gpu",
     ],
+    ...(process.env.PUPPETEER_EXECUTABLE_PATH ? { executablePath: process.env.PUPPETEER_EXECUTABLE_PATH } : {}),
   },
   webVersionCache: {
     type: "remote",
