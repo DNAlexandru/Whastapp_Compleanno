@@ -16,8 +16,6 @@ const leggiStato = () => (fs.existsSync(fileStato) ? JSON.parse(fs.readFileSync(
 const scriviStato = (s) => fs.writeFileSync(fileStato, JSON.stringify(s, null, 2));
 const log = (...a) => console.log(new Date().toISOString(), ...a);
 
-const botPhone = process.env.BOT_PHONE_NUMBER || "393401137862";
-
 const client = new Client({
   authStrategy: new LocalAuth({ dataPath: path.join(root, ".wwebjs_auth") }),
   puppeteer: {
@@ -36,25 +34,19 @@ const client = new Client({
     remotePath: "https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/{version}.html",
     strict: false,
   },
-  pairWithPhoneNumber: {
-    phoneNumber: botPhone,
-    showNotification: true,
-  },
   authTimeoutMs: 90000,
 });
 
 let gruppoId = null;
 const approvatoreId = `${config.approvatore}@c.us`;
 
-client.on("code", (code) => {
-  log("\n" + "=".repeat(48));
-  log(`🔑 CODICE DI COLLEGAMENTO WHATSAPP: ${code}`);
-  log(`📱 Notifica inviata al tuo telefono (+${botPhone})!`);
-  log("   Oppure in WhatsApp: Dispositivi collegati → Collega con numero di telefono");
-  log("=".repeat(48) + "\n");
-});
 client.on("qr", (qr) => {
-  log("Scansiona il QR con WhatsApp del numero del bot (Impostazioni → Dispositivi collegati → Collega un dispositivo):");
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(qr)}`;
+  log("\n" + "=".repeat(60));
+  log("📱 LINK DIRETTO PER SCANSIONARE IL QR CODE:");
+  log(qrUrl);
+  log("👉 Apri il link sopra nel browser: comparirà un'immagine QR perfetta da inquadrare!");
+  log("=".repeat(60) + "\n");
   qrcode.generate(qr, { small: true });
 });
 client.on("auth_failure", (m) => log("Autenticazione fallita:", m));
